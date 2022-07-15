@@ -18,8 +18,8 @@ data = pd.DataFrame(roster_df)
 
 data.drop(['StudMi', 'GrpGroupName', 'StaffLname',
           'StaffFname', 'StaffMi', 'DormId', 'Resident', 'StudentGroupGroupId',
-           'StaffId', 'GrpGroupTypeCd', 'SortBy'], axis=1, inplace=True)
+           'StaffId', 'GrpGroupTypeCd', 'SortBy', 'LOS'], axis=1, inplace=True)
 # data['FullName'] = data['StudentFName'] + ' ' + data['StudentLName']
 # data.drop(['StudentFName', 'StudentLName'], axis=1, inplace=True)
 data = data.sort_values('BehaviorDt')
-data.to_csv(f"{desktop}Current_IncVol_Cleaned.csv")
+data.to_csv("Current_IncVol_Cleaned.csv")
